@@ -1,6 +1,8 @@
-import { Router } from '@router/router';
 import React from 'react';
 import styles from './App.module.scss';
+import { AppHeader } from './AppHeader';
+import { AppMain } from './AppMain';
+import { AppNav } from './AppNav';
 import { Spinner } from './Spinner';
 
 export const App: React.FC = () => {
@@ -8,7 +10,11 @@ export const App: React.FC = () => {
     <>
       <Spinner />
       <div className={styles.wrap}>
-        <Router />
+        <AppHeader />
+        <div className={styles.appCenterWrap}>
+          <AppNav />
+          <AppMain />
+        </div>
       </div>
     </>
   );

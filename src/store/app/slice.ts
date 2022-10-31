@@ -3,10 +3,12 @@ import { AppRedirectUrl } from './types';
 
 export interface InitialState {
   redirectUrl: AppRedirectUrl | null;
+  isShowMainMenu: boolean;
 }
 
 const initialState: InitialState = {
   redirectUrl: null,
+  isShowMainMenu: true,
 };
 
 export const { actions, reducer } = createSlice({
@@ -22,6 +24,14 @@ export const { actions, reducer } = createSlice({
       state.redirectUrl = {
         path: action.payload,
       };
+    },
+
+    toggleIsShowMainMenu: (state) => {
+      state.isShowMainMenu = !state.isShowMainMenu;
+    },
+
+    setIsShowMainMenu: (state, action: PayloadAction<boolean>) => {
+      state.isShowMainMenu = action.payload;
     },
   },
 });

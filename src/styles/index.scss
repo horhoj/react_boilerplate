@@ -1,3 +1,5 @@
+@import "colors";
+
 *,
 *::before,
 *::after {
@@ -5,10 +7,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // background-color: var(--secondary);
+  color: var(--secondary-color);
 }
 
 body {
   min-width: 360px;
 }
+
+* {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+    border: 1px solid var(--white);
+  }
+}
+
+body {
+  min-width: 360px;
+}
+
 
 

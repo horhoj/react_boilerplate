@@ -3,3 +3,6 @@ import { AppRedirectUrl } from './types';
 
 export const getRedirectUrl = (state: RootState): AppRedirectUrl | null =>
   state.app.redirectUrl;
+
+export const getIsShowMainMenu = (state: RootState): boolean =>
+  state.app.isShowMainMenu;

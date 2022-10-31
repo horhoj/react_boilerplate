@@ -1,0 +1,25 @@
+.wrap {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+
+  transition: filter 300ms;
+
+  &:hover {
+    filter: brightness(1.2);
+
+  }
+
+  &>span {
+    background-color: var(--secondary);
+    height: 100%;
+    width: 100%;
+
+  }
+}

@@ -13,7 +13,7 @@ export type RouteNameList = typeof routeNameList[number];
 
 export const routeList: Record<RouteNameList, RouteItem> = {
   main: {
-    path: '/main',
+    path: '/',
     component: MainPage,
   },
   error404: {
