@@ -4,11 +4,13 @@ import { AppRedirectUrl } from './types';
 export interface InitialState {
   redirectUrl: AppRedirectUrl | null;
   isShowMainMenu: boolean;
+  isLeftMenuMobileVariant: boolean;
 }
 
 const initialState: InitialState = {
   redirectUrl: null,
   isShowMainMenu: true,
+  isLeftMenuMobileVariant: true,
 };
 
 export const { actions, reducer } = createSlice({
@@ -32,6 +34,10 @@ export const { actions, reducer } = createSlice({
 
     setIsShowMainMenu: (state, action: PayloadAction<boolean>) => {
       state.isShowMainMenu = action.payload;
+    },
+
+    setIsLeftMenuMobileVariant: (state, action: PayloadAction<boolean>) => {
+      state.isLeftMenuMobileVariant = action.payload;
     },
   },
 });

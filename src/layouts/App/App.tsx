@@ -1,3 +1,4 @@
+import { appSlice } from '@store/app';
 import React from 'react';
 import styles from './App.module.scss';
 import { AppHeader } from './AppHeader';
@@ -6,6 +7,8 @@ import { AppNav } from './AppNav';
 import { Spinner } from './Spinner';
 
 export const App: React.FC = () => {
+  appSlice.hooks.useApp();
+
   return (
     <>
       <Spinner />

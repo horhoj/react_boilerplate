@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { createPortal } from 'react-dom';
-import { useAppDispatch } from '@store/hooks';
+import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { appSlice } from '@store/app';
 import { AppNavCore } from './AppNavCore';
 import styles from './AppNav.module.scss';
@@ -14,11 +14,18 @@ export const AppNav: FC = () => {
     dispatch(appSlice.actions.toggleIsShowMainMenu());
   };
 
-  return (
+  const isLeftMenuMobileVariant = useAppSelector(
+    appSlice.selectors.getIsLeftMenuMobileVariant,
+  );
+
+  return isLeftMenuMobileVariant ? (
     <Portal>
-      <div className={styles.wrap} onClick={handleWrapClk}>
+      <div className={styles.wrap}>
         <AppNavCore />
+        <div onClick={handleWrapClk} className={styles.xxx} />
       </div>
     </Portal>
+  ) : (
+    <AppNavCore />
   );
 };

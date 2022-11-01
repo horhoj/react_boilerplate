@@ -5,7 +5,11 @@
   z-index: 1000;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-
   display: flex;
+}
+
+.xxx {
+  display: flex;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }

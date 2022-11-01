@@ -6,3 +6,6 @@ export const getRedirectUrl = (state: RootState): AppRedirectUrl | null =>
 
 export const getIsShowMainMenu = (state: RootState): boolean =>
   state.app.isShowMainMenu;
+
+export const getIsLeftMenuMobileVariant = (state: RootState): boolean =>
+  state.app.isLeftMenuMobileVariant;
