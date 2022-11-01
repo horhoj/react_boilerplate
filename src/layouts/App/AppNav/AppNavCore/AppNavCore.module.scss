@@ -4,14 +4,6 @@
   min-width: 300px;
   flex-grow: 0;
   background-color: #888;
-
-  @media (max-width: 768px) {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    z-index: 1000;
-  }
 }
 
 .enter {

@@ -15,7 +15,7 @@ export const AppNavCore: FC = () => {
       timeout={300}
       unmountOnExit
       classNames={{
-        enter: styles.cre,
+        enter: styles.enter,
         enterActive: styles.enterActive,
         exit: styles.exit,
         exitActive: styles.exitActive,
