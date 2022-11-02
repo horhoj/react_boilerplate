@@ -4,6 +4,6 @@
   min-width: 300px;
   flex-grow: 0;
   padding: 10px;
-  box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+  box-shadow: var(--shadow);
   flex-grow: 1;
 }

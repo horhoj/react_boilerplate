@@ -9,3 +9,6 @@ export const getIsShowMainMenu = (state: RootState): boolean =>
 
 export const getIsLeftMenuMobileVariant = (state: RootState): boolean =>
   state.app.isLeftMenuMobileVariant;
+
+export const getIsDarkTheme = (state: RootState): boolean =>
+  state.app.isDarkTheme;

@@ -1,7 +1,4 @@
-@import "~styles/settings";
-
 .wrap {
   overflow: auto;
-  max-height: calc(100vh - $HEADER_HEIGHT);
   padding: 10px;
 }

@@ -5,12 +5,14 @@ export interface InitialState {
   redirectUrl: AppRedirectUrl | null;
   isShowMainMenu: boolean;
   isLeftMenuMobileVariant: boolean;
+  isDarkTheme: boolean;
 }
 
 const initialState: InitialState = {
   redirectUrl: null,
   isShowMainMenu: false,
   isLeftMenuMobileVariant: true,
+  isDarkTheme: false,
 };
 
 export const { actions, reducer } = createSlice({
@@ -38,6 +40,14 @@ export const { actions, reducer } = createSlice({
 
     setIsLeftMenuMobileVariant: (state, action: PayloadAction<boolean>) => {
       state.isLeftMenuMobileVariant = action.payload;
+    },
+
+    setIsDarkTheme: (state, action: PayloadAction<boolean>) => {
+      state.isDarkTheme = action.payload;
+    },
+
+    toggleIsDarkTheme: (state) => {
+      state.isDarkTheme = !state.isDarkTheme;
     },
   },
 });

@@ -1,3 +1,4 @@
+import { IconButton } from '@components/IconButton';
 import { appSlice } from '@store/app';
 import { useAppDispatch } from '@store/hooks';
 import { FC } from 'react';
@@ -11,10 +12,12 @@ export const ToggleMainMenuButton: FC = () => {
   };
 
   return (
-    <button className={styles.wrap} onClick={handleToggleBtnClk}>
-      <span />
-      <span />
-      <span />
-    </button>
+    <IconButton onClick={handleToggleBtnClk}>
+      <span className={styles.icon}>
+        <span />
+        <span />
+        <span />
+      </span>
+    </IconButton>
   );
 };

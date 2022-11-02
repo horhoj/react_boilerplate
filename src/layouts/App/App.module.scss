@@ -14,4 +14,6 @@
   flex-grow: 1;
   overflow: hidden;
   position: relative;
+  // max-height: calc(100vh - $HEADER_HEIGHT - $FOOTER_HEIGHT);
+  max-height: calc(100vh - $HEADER_HEIGHT);
 }

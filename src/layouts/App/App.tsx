@@ -1,6 +1,7 @@
 import { appSlice } from '@store/app';
 import React from 'react';
 import styles from './App.module.scss';
+// import { AppFooter } from './AppFooter';
 import { AppHeader } from './AppHeader';
 import { AppMain } from './AppMain';
 import { AppNav } from './AppNav';
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
           <AppNav />
           <AppMain />
         </div>
+        {/* <AppFooter /> */}
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import { ToggleMainMenuButton } from '../ToggleMainMenuButton';
 import styles from './AppHeaderLeftBlock.module.scss';
-import { ToggleMainMenuButton } from './ToggleMainMenuButton';
 
 export const AppHeaderLeftBlock: FC = () => {
   return (
