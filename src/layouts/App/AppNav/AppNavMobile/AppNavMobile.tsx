@@ -1,15 +1,13 @@
+import { Portal } from '@components/Portal';
 import { AppHeaderLeftBlock } from '@layouts/App/AppHeaderLeftBlock';
 import { appSlice } from '@store/app';
 import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { FC, useRef } from 'react';
-import { createPortal } from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 import { AppNavData } from '../AppNavData';
 import styles from './AppNavMobile.module.scss';
 
-const Portal: FC = ({ children }) => createPortal(children, document.body);
-
-export const AppNavMobile: FC = ({ children }) => {
+export const AppNavMobile: FC = () => {
   const dispatch = useAppDispatch();
   const ref = useRef<HTMLDivElement>(null);
   const isShowMainMenu = useAppSelector(appSlice.selectors.getIsShowMainMenu);
