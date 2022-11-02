@@ -7,13 +7,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // background-color: var(--secondary);
   color: var(--secondary-color);
 }
 
 body {
-  // min-width: 360px;
+  background-color: var(--body-background-color);
 }
+
+.body-overflow-hidden {
+  overflow: hidden;
+}
+
 
 * {
   &::-webkit-scrollbar {
@@ -31,7 +35,6 @@ body {
     border: 1px solid var(--white);
   }
 }
-
 
 
 

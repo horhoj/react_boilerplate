@@ -2,9 +2,10 @@ import { appSlice } from '@store/app';
 import { useAppSelector } from '@store/hooks';
 import { FC, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import styles from './AppNavCore.module.scss';
+import { AppNavData } from '../AppNavData';
+import styles from './AppNavDesktop.module.scss';
 
-export const AppNavCore: FC = () => {
+export const AppNavDesktop: FC = () => {
   const isSHowMainMenu = useAppSelector(appSlice.selectors.getIsShowMainMenu);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -21,12 +22,9 @@ export const AppNavCore: FC = () => {
         exitActive: styles.exitActive,
       }}
     >
-      <nav className={styles.wrap} ref={ref}>
-        <ol>
-          <li>12131</li>
-          <li>1123123</li>
-        </ol>
-      </nav>
+      <div className={styles.wrap} ref={ref}>
+        <AppNavData />
+      </div>
     </CSSTransition>
   );
 };

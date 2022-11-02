@@ -1,8 +1,10 @@
+@import "~styles/settings";
+
 .wrap {
   min-height: 100vh;
-  max-width: 1024px;
+  max-width: $APP_MAX_WIDTH;
   margin: 0 auto;
-  background-color: #bbb;
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
 }

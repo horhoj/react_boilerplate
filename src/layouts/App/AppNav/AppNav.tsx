@@ -1,31 +1,14 @@
 import { FC } from 'react';
-import { createPortal } from 'react-dom';
-import { useAppDispatch, useAppSelector } from '@store/hooks';
+import { useAppSelector } from '@store/hooks';
 import { appSlice } from '@store/app';
-import { AppNavCore } from './AppNavCore';
-import styles from './AppNav.module.scss';
+import { AppNavDesktop } from './AppNavDesktop';
 
-const Portal: FC = ({ children }) => createPortal(children, document.body);
+import { AppNavMobile } from './AppNavMobile';
 
 export const AppNav: FC = () => {
-  const dispatch = useAppDispatch();
-
-  const handleWrapClk = () => {
-    dispatch(appSlice.actions.toggleIsShowMainMenu());
-  };
-
   const isLeftMenuMobileVariant = useAppSelector(
     appSlice.selectors.getIsLeftMenuMobileVariant,
   );
 
-  return isLeftMenuMobileVariant ? (
-    <Portal>
-      <div className={styles.wrap}>
-        <AppNavCore />
-        <div onClick={handleWrapClk} className={styles.xxx} />
-      </div>
-    </Portal>
-  ) : (
-    <AppNavCore />
-  );
+  return isLeftMenuMobileVariant ? <AppNavMobile /> : <AppNavDesktop />;
 };

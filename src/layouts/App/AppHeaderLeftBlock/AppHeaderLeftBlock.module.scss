@@ -1,0 +1,17 @@
+@import "~styles/settings";
+
+
+.wrap {
+  height: $HEADER_HEIGHT;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 30px;
+  background-color: var(--primary);
+  gap: 20px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+}

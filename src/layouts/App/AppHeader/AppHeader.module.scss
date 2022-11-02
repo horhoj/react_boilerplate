@@ -1,10 +1,10 @@
+@import "~styles/settings";
+
 .wrap {
-  height: 80px;
+  height: $HEADER_HEIGHT;
   background-color: var(--primary);
   color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0 30px;
 }

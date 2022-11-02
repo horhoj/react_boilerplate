@@ -9,7 +9,7 @@ export interface InitialState {
 
 const initialState: InitialState = {
   redirectUrl: null,
-  isShowMainMenu: true,
+  isShowMainMenu: false,
   isLeftMenuMobileVariant: true,
 };
 
