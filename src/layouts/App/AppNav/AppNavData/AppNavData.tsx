@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { getRoutePath } from '@router/helpers';
-import { AppNavDataLink } from './AppNavDataLink';
+import { AppNavDataLink } from '../AppNavDataLink';
 import styles from './AppNavData.module.scss';
 
 export const AppNavData: FC = () => {

@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { AppHeaderLeftBlock } from '../AppHeaderLeftBlock';
-import { AppHeaderRightBlock } from '../AppHeaderRightBlock';
+import { AppHeaderLeftBlock } from './AppHeaderLeftBlock';
+import { AppHeaderRightBlock } from './AppHeaderRightBlock';
 import styles from './AppHeader.module.scss';
 
 export const AppHeader: FC = () => {

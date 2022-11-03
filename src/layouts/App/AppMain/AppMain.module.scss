@@ -1,4 +1,6 @@
+@import "~styles/mixins.scss";
+
 .wrap {
+  @include blockPadding;
   overflow: auto;
-  padding: 10px;
 }

@@ -1,5 +1,5 @@
 import { Portal } from '@components/Portal';
-import { AppHeaderLeftBlock } from '@layouts/App/AppHeaderLeftBlock';
+import { AppHeaderLeftBlock } from '@layouts/App/AppHeader/AppHeaderLeftBlock';
 import { appSlice } from '@store/app';
 import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { FC, useRef } from 'react';
@@ -32,7 +32,9 @@ export const AppNavMobile: FC = () => {
       >
         <div className={styles.wrap} ref={ref} onClick={handleWrapClk}>
           <div className={styles.dataWrap} onClick={(e) => e.stopPropagation()}>
-            <AppHeaderLeftBlock />
+            <div className={styles.appHeaderLeftBlockWrap}>
+              <AppHeaderLeftBlock />
+            </div>
             <AppNavData />
           </div>
         </div>
