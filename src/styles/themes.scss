@@ -7,7 +7,7 @@
   --shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
   --link-primary-color: #e6e78b;
   --link-secondary-color: #3265c2;
-
+  --left-menu-hover-link-background-color: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -19,4 +19,5 @@
   --shadow: 0px 0px 5px rgba(200, 200, 200, 0.25);
   --link-primary-color: #3265c2;
   --link-secondary-color: #e6e78b;
+  --left-menu-hover-link-background-color: rgba(255, 255, 255, 0.1);
 }

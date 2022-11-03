@@ -49,5 +49,11 @@ export const { actions, reducer } = createSlice({
     toggleIsDarkTheme: (state) => {
       state.isDarkTheme = !state.isDarkTheme;
     },
+
+    hideMobileMenu: (state) => {
+      if (state.isLeftMenuMobileVariant) {
+        state.isShowMainMenu = false;
+      }
+    },
   },
 });
