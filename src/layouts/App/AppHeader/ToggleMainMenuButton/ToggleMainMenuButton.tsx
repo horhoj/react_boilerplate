@@ -1,7 +1,8 @@
 import { IconButton } from '@components/IconButton';
 import { appSlice } from '@store/app';
-import { useAppDispatch } from '@store/hooks';
+import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { FC } from 'react';
+import classNames from 'classnames';
 import styles from './ToggleMainMenuButton.module.scss';
 
 export const ToggleMainMenuButton: FC = () => {
@@ -11,13 +12,21 @@ export const ToggleMainMenuButton: FC = () => {
     dispatch(appSlice.actions.toggleIsShowMainMenu());
   };
 
-  return (
+  const isLeftMenuMobileVariant = useAppSelector(
+    appSlice.selectors.getIsLeftMenuMobileVariant,
+  );
+
+  const isShowMainMenu = useAppSelector(appSlice.selectors.getIsShowMainMenu);
+
+  return isLeftMenuMobileVariant ? (
     <IconButton onClick={handleToggleBtnClk}>
-      <span className={styles.icon}>
+      <span
+        className={classNames(styles.icon, isShowMainMenu && styles.iconCross)}
+      >
         <span />
         <span />
         <span />
       </span>
     </IconButton>
-  );
+  ) : null;
 };

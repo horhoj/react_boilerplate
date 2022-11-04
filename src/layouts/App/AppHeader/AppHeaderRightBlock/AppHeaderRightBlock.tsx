@@ -16,7 +16,7 @@ export const AppHeaderRightBlock: FC = () => {
   return (
     <div className={styles.wrap}>
       <IconButton onClick={handleToggleDarkTheme}>
-        {isDarkTheme ? 'dark' : 'light'}
+        <span className={styles.text}>{isDarkTheme ? 'DM' : 'LM'}</span>
       </IconButton>
     </div>
   );

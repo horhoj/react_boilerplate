@@ -1,7 +1,7 @@
 import { appSlice } from '@store/app';
 import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { useEffect } from 'react';
-import { LS_KEY_IS_DARK_THEME } from './../../config/app';
+import { LS_KEY_IS_DARK_THEME } from '@config/app';
 
 export const useApp = (): void => {
   const dispatch = useAppDispatch();
