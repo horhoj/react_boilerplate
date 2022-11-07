@@ -18,15 +18,18 @@ export const ToggleMainMenuButton: FC = () => {
 
   const isShowMainMenu = useAppSelector(appSlice.selectors.getIsShowMainMenu);
 
-  return isLeftMenuMobileVariant ? (
+  return (
     <IconButton onClick={handleToggleBtnClk}>
       <span
-        className={classNames(styles.icon, isShowMainMenu && styles.iconCross)}
+        className={classNames(
+          styles.icon,
+          isShowMainMenu && isLeftMenuMobileVariant && styles.iconCross,
+        )}
       >
         <span />
         <span />
         <span />
       </span>
     </IconButton>
-  ) : null;
+  );
 };
